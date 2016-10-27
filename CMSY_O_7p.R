@@ -1317,3 +1317,4 @@ if(write.output == TRUE) {
 
 #stop parallel processing clusters
 stopCluster(cl)
+stopImplicitCluster()
