@@ -3,6 +3,7 @@
 ## Written by Rainer Froese, Gianpaolo Coro and Henning Winker
 ## Version of November 2016
 ## Note that time series excluding 2004 - 2010 will give an error in dataframe; set write.output <- F to avoid that error
+## Version CMSY_O_7q.R
 ##---------------------------------------------------------------------------------------------
 library(R2jags)  # Interface with JAGS
 library(coda) 
