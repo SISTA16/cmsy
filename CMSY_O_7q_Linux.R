@@ -1082,7 +1082,7 @@ for(stock in stocks) {
              pointsize = 18,
              quality = 95,
              res=80,
-             antialias="subpixel")
+             antialias="default")
     dev.off()
   }
   
@@ -1191,7 +1191,7 @@ for(stock in stocks) {
              pointsize = 18,
              quality = 95,
              res=80,
-             antialias="subpixel")
+             antialias="default")
     dev.off()
   }
   
