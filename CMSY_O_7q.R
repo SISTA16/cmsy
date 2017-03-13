@@ -40,7 +40,7 @@ outfile.txt <- paste(outfile,".txt", sep="")
 stocks      <-NA
 # If the input files contain more than one stock, specify below the stock to be analyzed
 # If the line below is commented out (#), all stocks in the input file will be analyzed
- stocks <-  "ILLECOI_AL" # c("SEPIOFF_CY","MICRPOU_IS","EPINGUA_IS","CHAMGAL_SA","CORYHIP_SA","ILLECOI_SA")
+ stocks <-  "SARDPIL_SA_EXAMPLE" # c("SEPIOFF_CY","MICRPOU_IS","EPINGUA_IS","CHAMGAL_SA","CORYHIP_SA","ILLECOI_SA")
 
 #-----------------------------------------
 # General settings for the analysis
