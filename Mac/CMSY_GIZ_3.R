@@ -376,7 +376,7 @@ for(stock in stocks) {
   # Plot data and progress
   #-----------------------------------------------------------------
   # check for operating system, open separate window for graphs if Windows
-  if(grepl("win",tolower(Sys.info()['sysname']))) {windows(14,9)}
+  if(grepl("Darwin",tolower(Sys.info()['sysname']))) {quartz(14,9)}
   par(mfrow=c(2,3))
   # plot catch
   plot(x=yr, y=ct.raw, 
@@ -1092,7 +1092,7 @@ if (save.plots==TRUE)
 #---------------------------------------------
 if(mgraphs==T) {
   # open window for plot of four panels
-  if(grepl("win",tolower(Sys.info()['sysname']))) {windows(14,12)}
+  if(grepl("Darwin",tolower(Sys.info()['sysname']))) {quartz(14,12)}
   par(mfrow=c(2,2))  
   # make margins narrower
   par(mar=c(3.1,4.1,2.1,2.1))
