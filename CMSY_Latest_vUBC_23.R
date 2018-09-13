@@ -1,7 +1,7 @@
 ##---------------------------------------------------------------------------------------------
 ## CMSY and BSM analysis ----
 ## Written by Rainer Froese, Gianpaolo Coro and Henning Winker in 2016
-## Version of May 2018 for use by Sea Around Us UBC, with PDF creation added by Gordon Tsui and Gianpaolo Coro
+## Version of May 2018 with PDF creation added by Gordon Tsui and Gianpaolo Coro
 ## Default rules for biomass windows and range of q were improved for better batch processing
 ## Time series within 1950-2020 are stored in csv file 
 ##---------------------------------------------------------------------------------------------
@@ -32,8 +32,8 @@ registerDoParallel(cl, cores = ncores_for_computation)
 #-----------------------------------------
 # Required settings, File names ----
 #-----------------------------------------
-catch_file  <-  "O_Stocks_Catch_StraddlingStocks_2.csv" #  name of file containing "stock", "yr", "ct", and optional "bt"
-id_file     <-  "O_Stocks_ID_StraddlingStocks_2.csv"  #  name of file containing stock-specific info and settings for the analysis
+catch_file  <-  "O_Stocks_Catch_AusCPUE_2.csv" #  name of file containing "stock", "yr", "ct", and optional "bt"
+id_file     <-  "O_Stocks_ID_AusCPUE_2.csv"  #  name of file containing stock-specific info and settings for the analysis
 
 outfile     <- paste("Out_",format(Sys.Date(),format="%B%d%Y_"),id_file,sep="") # default name for output file
 outfile.txt <- paste(outfile,".txt", sep="") 
@@ -44,7 +44,7 @@ outfile.txt <- paste(outfile,".txt", sep="")
 stocks      <-NA
 # If the input files contain more than one stock, specify below the stock to be analyzed
 # If the line below is commented out (#), all stocks in the input file will be analyzed
- stocks <- c("Bery_spl_NorthEastAtlantic")   
+ stocks <- c("Nema_mac_Australia")   
  
 
 #-----------------------------------------
@@ -58,7 +58,7 @@ ni           <- 3 # iterations for r-k-startbiomass combinations, to test differ
 nab          <- 2 # default=5; minimum number of years with abundance data to run BSM
 mgraphs      <- T # set to TRUE to produce additional graphs for management
 save.plots   <- T # set to TRUE to save graphs to JPEG files
-close.plots  <- T # set to TRUE to close on-screen plots after they are saved, to avoid "too many open devices" error in batch-processing
+close.plots  <- F # set to TRUE to close on-screen plots after they are saved, to avoid "too many open devices" error in batch-processing
 write.output <- T # set to TRUE if table with results in output file is wanted; expects years 2004-2014 to be available
 write.pdf    <- T # set to TRUE if PDF output of results is wanted. Requires pdflex.
 force.cmsy   <- F # set to TRUE if CMSY results are to be preferred over BSM results
